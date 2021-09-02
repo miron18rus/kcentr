@@ -1,0 +1,76 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+.header{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+
+.catalog{
+    /* display: grid;
+    grid-template-columns: 240px 240px 240px 240px 240px; */
+    display: flex;
+    flex-wrap: wrap;
+    
+
+    &__item{
+        max-width: 200px;
+        padding-bottom: 15px;
+        margin: 0 auto;
+ 
+
+    }
+    &__text-link{
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        margin: 20px;
+        color: #423939
+    }
+}
+
+@media (max-width: 1200px){
+    .container{
+        max-width: 970px;
+    }
+    .catalog{
+        /* display: grid;
+        grid-template-columns: 240px 240px 240px 240px */
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 992px){
+    .container{
+        max-width: 750px;
+    }
+    .catalog{
+        /* display: grid;
+        grid-template-columns: 240px 240px 240px; */
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+}
+
+@media (max-width: 714px){
+    .container{
+        max-width: none;
+    }
+    .catalog{
+        /* display: grid;
+        grid-template-columns: 400px */
+        display: flex;
+        flex-direction: column;
+        &__item{
+            max-width: 684px;
+            max-height: 300;
+            padding-bottom: 15px;
+        }
+     }
+}
